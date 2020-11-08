@@ -636,7 +636,7 @@ footer i {
   }
 
   .about {
-    height: 200vh;
+    height: 220vh;
   }
   .services {
     grid-template-columns: repeat(1, 1fr);
