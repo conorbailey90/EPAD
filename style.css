@@ -531,7 +531,7 @@ footer i {
   .mobile-nav ul {
     position: absolute;
     left: 10%;
-    top: 20%;
+    top: 10%;
     height: 60vh;
     width: 80%;
 
@@ -601,7 +601,7 @@ footer i {
   }
 
   .hero-text {
-    top: 60vh;
+    top: 55vh;
     width: 80%;
     text-align: center;
   }
@@ -620,8 +620,19 @@ footer i {
 }
 
 @media screen and (max-width: 500px) {
+  .welcome {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
+  }
+  .welcome.active {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
+  }
+
   .about {
-    height: 200vh;
+    height: 220vh;
   }
   .services {
     grid-template-columns: repeat(1, 1fr);
@@ -654,6 +665,11 @@ footer i {
     width: 100%;
     height: 150vh;
   }
+  .projects-container {
+    top: 120px;
+    left: 10%;
+    width: 80%;
+  }
 
   .projects-grid {
     grid-template-columns: 1fr;
@@ -661,5 +677,10 @@ footer i {
 
   .project {
     height: 150px;
+  }
+
+  /* Contact */
+  .contact-form {
+    top: 120px;
   }
 }
