@@ -606,6 +606,10 @@ footer i {
     text-align: center;
   }
 
+  .about {
+    height: 150vh;
+  }
+
   /* Services */
 
   .services {
@@ -632,7 +636,7 @@ footer i {
   }
 
   .about {
-    height: 250vh;
+    height: 200vh;
   }
   .services {
     grid-template-columns: repeat(1, 1fr);
