@@ -47,7 +47,7 @@ header {
   backdrop-filter: blur(5px);
 }
 
-.logo svg {
+.logo h2 {
   position: absolute;
   left: 10%;
   top: 50%;
@@ -67,7 +67,8 @@ header ul {
 }
 header ul li {
   margin-left: 25px;
-  color: #252422;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 .mobile-nav {
@@ -89,7 +90,6 @@ header ul li {
   z-index: 1;
   top: 0px;
   left: 0;
-  /* height: 700px; */
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -127,7 +127,7 @@ header ul li {
   background-color: black;
   width: 100%;
   height: 100vh;
-  opacity: 0.1;
+  opacity: 0.8;
 }
 
 .welcome {
@@ -145,7 +145,7 @@ header ul li {
 .welcome.active {
   top: 30%;
   opacity: 1;
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .hero-text {
@@ -153,10 +153,9 @@ header ul li {
   bottom: 0;
   left: 10%;
   z-index: 5;
-  width: 40%;
+  width: 50%;
   height: 200px;
   color: #fff;
-  background-color: black;
   padding-top: 1rem;
   padding-right: 1rem;
   opacity: 1;
@@ -255,6 +254,7 @@ h3 {
   z-index: 10;
   height: 100px;
   width: 40px;
+  text-align: center;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -270,14 +270,27 @@ h3 {
 
 .about {
   position: relative;
+  /* top: 10vh; */
   left: 0;
   width: 100%;
-  height: 100vh;
+}
+
+.about-container {
+  position: relative;
+  top: 10vh;
+  left: -20px;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+.about-container.active {
+  left: 0;
+  opacity: 1;
+  transition: 0.5s ease-in;
 }
 
 .about h1 {
   position: relative;
-  top: 10vh;
   left: 10%;
   width: 80%;
   margin: 2rem 0 1.5rem 0;
@@ -285,7 +298,6 @@ h3 {
 
 .about p {
   position: relative;
-  top: 10vh;
   left: 10%;
   width: 80%;
   line-height: 30px;
@@ -293,14 +305,19 @@ h3 {
   margin: 1.5rem 0 1.5rem 0;
 }
 
-.services {
+.services-container {
   position: relative;
   top: 10vh;
+}
+
+.services {
+  position: relative;
   left: 10%;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
+  margin-bottom: 20vh;
 }
 
 .service {
@@ -322,8 +339,9 @@ h3 {
 footer {
   position: relative;
   left: 0;
-  width: 100%;
+
   height: 50vh;
+  width: 100%;
   background-color: black;
   color: white;
 }
@@ -332,10 +350,9 @@ footer {
   position: absolute;
   left: 10%;
   display: flex;
-  height: 80%;
   width: 80%;
+  height: 400px;
   justify-content: space-between;
-
   letter-spacing: 1px;
   line-height: 20px;
   font-size: 0.9rem;
@@ -344,10 +361,6 @@ footer {
 .ft {
   padding-top: 3rem;
   text-align: left;
-}
-
-.socials {
-  text-align: center;
 }
 
 footer img {
@@ -373,16 +386,18 @@ footer i {
 
 .projects {
   position: relative;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100vh;
 }
 
 .projects-container {
-  position: absolute;
+  position: relative;
   top: 20vh;
   left: 10%;
   width: 80%;
-  height: 80vh;
+  height: 1000px;
 }
 .projects-grid {
   position: relative;
@@ -429,6 +444,140 @@ footer i {
   letter-spacing: 2px;
 }
 
+/* Quote page */
+
+.quotes {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.quote-selection {
+  position: absolute;
+  left: 10%;
+  top: 20vh;
+  width: 80%;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.quote-card {
+  position: relative;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.529);
+}
+
+.standard-quote,
+.guide-price {
+  height: 80%;
+  margin-top: 15%;
+}
+
+.premium-quote {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.quote-form {
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+
+.quote-header {
+  position: relative;
+  text-align: center;
+  padding: 1.5rem;
+  left: 0;
+  top: 0;
+}
+
+.seperator {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background-color: #ffffff;
+  mix-blend-mode: difference;
+}
+
+.quote-description {
+  position: relative;
+  padding: 2rem;
+}
+
+.quote-cta {
+  text-align: center;
+  cursor: pointer;
+}
+.quote-cta:hover {
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.quote-header i {
+  font-size: 2rem;
+  margin: 1rem;
+  /* color: #f3a469; */
+  animation: changeColor 10s infinite;
+}
+
+.quote-instructions-container {
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+
+.quote-instructions-container h1 {
+  margin-bottom: 1rem;
+}
+
+.instruction-cards {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin: 2rem 0;
+}
+
+.instruction-cards div {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.529);
+  padding: 1rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.instruction-cards div i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.quote-form {
+  margin: 4rem 0;
+}
+.quote-form h1 {
+  margin-bottom: 1rem;
+}
+
+@keyframes changeColor {
+  0% {
+    color: #f3a469;
+  }
+
+  50% {
+    color: #f59246;
+  }
+
+  100% {
+    color: #f3a469;
+  }
+}
+
 /* Contact page */
 
 .contact {
@@ -451,6 +600,8 @@ footer i {
 
 #name,
 #email,
+#address,
+#quote-type,
 #telephone,
 #message {
   width: 100%;
@@ -473,7 +624,7 @@ footer i {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .navigation {
     display: none;
   }
@@ -606,8 +757,8 @@ footer i {
     text-align: center;
   }
 
-  .about {
-    height: 150vh;
+  .hero-text-p {
+    /* font-size: 0.4rem; */
   }
 
   /* Services */
@@ -621,7 +772,47 @@ footer i {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* Quotes page  */
+
+  .quotes {
+    position: relative;
+    width: 100%;
+    height: 130vh;
+  }
+  .quote-selection {
+    position: absolute;
+    left: 10%;
+    top: 15vh;
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .quote-card {
+    position: relative;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.529);
+  }
+
+  .quote-card:nth-child(2) {
+    order: -1;
+  }
+
+  .standard-quote,
+  .guide-price {
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .instruction-cards {
+    display: none;
+  }
 }
+
+/* Phone */
 
 @media screen and (max-width: 500px) {
   .welcome {
@@ -635,12 +826,22 @@ footer i {
     width: 80%;
   }
 
-  .about {
-    height: 220vh;
+  .about-container {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 700px;
+  }
+
+  .services-container {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 800px;
   }
   .services {
     grid-template-columns: repeat(1, 1fr);
-    /* height: 250vh; */
+    margin-bottom: 0;
   }
 
   .service {
@@ -659,19 +860,21 @@ footer i {
   footer {
     height: 80vh;
   }
+
   .footer-container {
     flex-direction: column;
   }
 
   /* Projects */
+
   .projects {
-    position: relative;
-    width: 100%;
-    height: 200vh;
+    height: 150vh;
   }
+
   .projects-container {
     top: 120px;
     left: 10%;
+    height: 1200px;
     width: 80%;
   }
 
@@ -681,6 +884,40 @@ footer i {
 
   .project {
     height: 150px;
+  }
+
+  /* Quotes page  */
+
+  .quotes {
+    position: relative;
+    width: 100%;
+    height: 150vh;
+  }
+  .quote-selection {
+    position: absolute;
+    left: 10%;
+    top: 15vh;
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .quote-card {
+    position: relative;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.529);
+  }
+
+  .standard-quote,
+  .guide-price {
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .instruction-cards {
+    display: none;
   }
 
   /* Contact */
