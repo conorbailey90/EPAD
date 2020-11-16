@@ -42,39 +42,35 @@
         </ul>
     </div>
 
-    <section class="home">
-        <section class="hero">
-            <div class="overlay">
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1 class="welcome"><span class="smaller">WELCOME TO</span></br>QUICK QUOTE</h1>
+            <p class="hero-text-p">Construction Estimating services with a fast turnaround of 24 hours.</p>
         
-            </div>
-            <h1 class="welcome">WELCOME TO </br>QUICK QUOTE</h1>
-            <div class="hero-text">
-                <p class="hero-text-p">Construction Estimating services with a fast turnaround of 24 hours.</p>
-                <!-- <p class="hero-text-p">EPAD is an Essex based design and construction company.
-                    Our team will take full care of your project, from design to realization whilst applying our broad 
-                    experience in architectural design, drawing and planning to any type/style of residential property.
-                </p> -->
-            
-            </div>
             <div onclick="goToQuote()" class="quote">
                 <div class="quote-inner">
                     <h4>Get A Quote</h4>
-                </div>
-                
+                </div>  
             </div>
-           
-            
-            <div class="main-photos">
-                <div class="socials">
-                    <a href=""><i class="fab fa-facebook-square"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
-                </div>
-                <img class="hero-img" src="./images/main-inner.jpg" alt="">
-            </div>
-           
-        </section>
+        </div>
+
+        <div class="down">
+            <a href="#about">
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+       
+        
     
+        <div class="socials">
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
     </section>
+    
+ 
     <section id="about" class="about">
         <div class="about-container">
             <h1>ABOUT</h1>
@@ -152,6 +148,7 @@
         function goToQuote(){
             location.assign('./quote.html')
         }
+    
     </script>
 </body>
 </html>
